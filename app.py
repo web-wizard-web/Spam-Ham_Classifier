@@ -213,6 +213,10 @@ df.head()
 # %% [markdown]
 # **Removing Stpwords- These are commonly used words like the,end,but,if that dont contribute much to the meaning of the sentence**
 
+
+import nltk
+nltk.download('stopwords')
+
 # %%
 stopwords=nltk.corpus.stopwords.words('english')
 
