@@ -562,7 +562,9 @@ import pickle
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-tfidf_vectorizer = TfidfVectorizer()  # Define the vectorizer
+with open("tfidf_vectorizer.pkl", "rb") as vectorizer_file:
+    tfidf_vectorizer = pickle.load(vectorizer_file)  # ✅ Load the trained vectorizer
+  # Define the vectorizer
 
 # Assuming X_train is already cleaned
 X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
