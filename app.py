@@ -36,4 +36,4 @@ st.title("Spam-Ham Classifier")
 message = st.text_area("Enter a message:")
 if st.button("Predict"):
     result = predict_message(message)
-    st.w
+    st.write(f"Prediction: {result}")
