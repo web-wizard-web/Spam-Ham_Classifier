@@ -643,3 +643,27 @@ else:
 
 # %%
 
+# Load the trained vectorizer & model
+with open("tfidf_vectorizer.pkl", "rb") as f:
+    tfidf_vectorizer = pickle.load(f)
+
+with open("spam_model.pkl", "rb") as f:
+    model = pickle.load(f)
+
+# Debugging: Print the expected number of features
+print("📢 Model expects features:", model.n_features_in_)
+print("📢 Vectorizer vocabulary size:", len(tfidf_vectorizer.get_feature_names_out()))
+
+# Function to preprocess and predict
+def predict_message(msg):
+    # Transform the input message
+    msg_tfidf = tfidf_vectorizer.transform([msg])
+
+    # Debugging: Print actual feature count of input message
+    print("📢 Input message transformed features:", msg_tfidf.shape[1])
+
+    # Predict
+    prediction = model.predict(msg_tfidf)[0]
+    return "Spam" if prediction == 1 else "Ham"
+
+# %%
