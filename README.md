@@ -37,7 +37,7 @@ tfidf_vectorizer.pkl (Vectorizer)
 
 🌐 STREAMLIT
 You can view my project through this url=>[ https://spam-hamclassifier-csguwrbefgjvp5h26zww9c.streamlit.app/
-](url)
+]( https://spam-hamclassifier-csguwrbefgjvp5h26zww9c.streamlit.app/)
 💡 Author & Contributions
 👤 Your Name - Gayatri Butkar
 🌐 GitHub: https://github.com/web-wizard-web
